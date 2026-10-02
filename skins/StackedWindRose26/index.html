@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light dark">
+  <title>Wind rose</title>
+  <link rel="stylesheet" href="stackedwindrose26.css">
+</head>
+<body class="swr26 swr26-page">
+  <main class="swr26-shell">
+    <header class="swr26-head">
+      <div>
+        <p class="swr26-eyebrow" data-swr26-station>Weather station</p>
+        <h1 class="swr26-h1">Wind rose</h1>
+      </div>
+      <nav class="swr26-tabs" data-swr26-tabs aria-label="Period"></nav>
+    </header>
+
+    <section class="swr26-card" aria-labelledby="swr26-title">
+      <div class="swr26-card-head">
+        <h2 class="swr26-h2" id="swr26-title" data-swr26-title>&nbsp;</h2>
+        <p class="swr26-range" data-swr26-range>&nbsp;</p>
+      </div>
+      <div class="swr26-stats" data-swr26-stats></div>
+      <div data-swr26-chart></div>
+      <p class="swr26-foot" data-swr26-foot></p>
+    </section>
+
+    <p class="swr26-credit"><span data-swr26-generator>weewx-stackedwindrose26</span> · rendered with D3 · powered by <a href="https://weewx.com">WeeWX</a></p>
+  </main>
+
+  <script src="js/d3.v7.min.js"></script>
+  <script src="js/stackedwindrose26.js"></script>
+  <script>
+    StackedWindRose26.app(document.body, 'stackedwindrose26.json', { refresh: 300 });
+  </script>
+</body>
+</html>

@@ -1,0 +1,16 @@
+1.0.0  2 October 2026
+    First release of weewx-stackedwindrose26, a rewrite of StackedWindRose 3.2.1
+    for WeeWX 5.
+    - Rendering moved to the browser: D3 v7 SVG replaces the PIL PNG.
+    - Generator writes JSON (one file per rose plus a manifest).
+    - Uses weewx.xtypes.get_series, so derived/xtype wind observations work.
+    - Configurable sector count, speed bands (auto / Beaufort / fixed list),
+      calm threshold, time or sample weighting, linear or sqrt radial scale.
+    - Calendar periods (day, week, month, year) as well as rolling periods.
+    - Automatic bands sized from the 99th percentile instead of the maximum.
+    - Gust roses fall back to windDir when windGustDir is empty.
+    - Missing speeds are no longer counted as calm.
+    - Honours the WeeWX 5.5 stop event; still runs on WeeWX 5.0 to 5.4.
+    - Atomic JSON writes; stale_age per rose.
+    - Page with period switcher, stats, hover and keyboard readout, data
+      table, light/dark themes; embeddable in other skins.
